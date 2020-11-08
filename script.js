@@ -22,6 +22,19 @@ function generateCriteria() {
     alert('Password too long!');
     return;
   }
+  
+    var includeUppercase = confirm("Include uppercase?");
+    var includeLowercase = confirm("Include lowercase?");
+    var includeNumber = confirm("Include numbers?");
+    var includeSpecial = confirm("Include special character?");
+  
+
+    if (!includeUppercase && !includeLowercase && !includeNumber && !includeSpecial) {
+      alert("Passwork must contain at least one Uppercase, one Lowercase, one number or one special character");
+      return;
+    }
+
+    
 
 }
 
