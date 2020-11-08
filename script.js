@@ -62,7 +62,7 @@ function generateCriteria() {
 
     while(passwordArray.length < length){
       var randomCharacter = possibleCharactersArray[Math.floor(Math.random() * possibleCharactersArray.length)];
-      passwordArray.push(random);
+      passwordArray.push(randomCharacter);
     }
 
 
