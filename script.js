@@ -9,6 +9,20 @@ var special = ['.','/',':',';','<','=','>','?','@','[',']','#','$','%','&','(','
 
 function generateCriteria() {
   
+  var length = parseInt(prompt("Choose between 8 and 128 characters please"));
+    
+  if (!length) {
+    alert("This needs a value");
+  }
+  if (length < 8) {
+    alert('Password too short!');
+    return;
+  }
+  if (length > 128) {
+    alert('Password too long!');
+    return;
+  }
+
 }
 
 
