@@ -34,7 +34,39 @@ function generateCriteria() {
       return;
     }
 
-    
+    var passwordArray = []; 
+    var possibleCharactersArray = []; 
+
+    if (includeUppercase){
+      possibleCharactersArray = possibleCharactersArray.concat(uppercase); 
+      var randomUpperCase = uppercase[Math.floor(Math.random() * uppercase.length)];
+      passwordArray.push(randomUpperCase);
+    }
+
+    if (includeLowercase){
+      possibleCharactersArray = possibleCharactersArray.concat(lowercase); 
+      var randomLowerCase = lowercase[Math.floor(Math.random() * lowercase.length)];
+      passwordArray.push(randomLowerCase);
+    }
+
+    if (includeNumber){
+      possibleCharactersArray = possibleCharactersArray.concat(number); 
+      var randomNumber = number[Math.floor(Math.random() * number.length)];
+      passwordArray.push(randomNumber);
+    }
+    if (includeSpecial){
+      possibleCharactersArray = possibleCharactersArray.concat(special); 
+      var randomSpecial = special[Math.floor(Math.random() * special.length)];
+      passwordArray.push(randomSpecial);
+    }
+
+    while(passwordArray.length < length){
+      var randomCharacter = possibleCharactersArray[Math.floor(Math.random() * possibleCharactersArray.length)];
+      passwordArray.push(random);
+    }
+
+
+    return passwordArray.join('');
 
 }
 
